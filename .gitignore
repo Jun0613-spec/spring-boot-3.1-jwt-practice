@@ -19,6 +19,17 @@ target/
 *.iml
 *.ipr
 
+# Local configuration file (sdk path, etc)
+local.properties
+.properties
+
+#Log Files
+*.log
+
+project.properties
+*.properties
+project.properties
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -32,4 +43,4 @@ build/
 ### VS Code ###
 .vscode/
 
-.application.properties
+
