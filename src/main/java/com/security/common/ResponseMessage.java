@@ -10,7 +10,6 @@ public interface ResponseMessage {
     public static final String DUPLICATE_EMAIL = "Duplicate email.";
     public static final String DUPLICATE_NICKNAME = "Duplicate nickname.";
     public static final String NOT_EXISTED_USER = "This user does not exist.";
-    public static final String NOT_EXISTED_POST = "This post does not exist.";
 
     //HTTP Status 401
     public static final String SIGN_IN_FAIL = "Login informatino mismatch.";
