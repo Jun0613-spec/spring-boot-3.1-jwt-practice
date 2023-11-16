@@ -10,7 +10,6 @@ public interface ResponseCode {
     public static final String DUPLICATE_EMAIL = "DE";
     public static final String DUPLICATE_NICKNAME = "DN";
     public static final String NOT_EXISTED_USER = "NEU";
-    public static final String NOT_EXISTED_POST = "NEP";
 
     //HTTP Status 401
     public static final String SIGN_IN_FAIL = "SF";
