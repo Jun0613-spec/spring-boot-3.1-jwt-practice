@@ -13,17 +13,15 @@ import lombok.Getter;
 @Getter
 public class GetSignInUserResponseDto extends ResponseDto{
     
-    private int userId;
     private String email;
-    private String nickname;
+    private String userName;
     private String profileImage;
 
     private GetSignInUserResponseDto(User userEntity) {
         super(ResponseCode.SUCCESS, ResponseMessage.SUCCESS);
         
-        this.userId = userEntity.getUserId();
         this.email = userEntity.getEmail();
-        this.nickname = userEntity.getNickname();
+        this.userName = userEntity.getUserName();
         this.profileImage = userEntity.getProfileImage();
     }
 

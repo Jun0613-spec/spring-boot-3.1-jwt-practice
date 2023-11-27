@@ -31,25 +31,25 @@ public class AuthServiceImplement implements AuthService{
 
         try {
 
-           String email = dto.getEmail();
-           boolean existedEmail = userRepository.existsByEmail(email);
-           if(existedEmail) return SignUpResponseDto.duplicateEmail();
-
-           String nickname= dto.getNickname();
-           boolean existedNickname = userRepository.existsByNickname(nickname);
-           if(existedNickname) return SignUpResponseDto.duplicateNickname();
-           
-           String password = dto.getPassword();
-           String encodedPassword = passwordEncoder.encode(password);
-           dto.setPassword(encodedPassword);
-           
-           User userEntity = new User(dto);
-           userRepository.save(userEntity);
-
-        } catch (Exception exception) {
-            exception.printStackTrace();
-            return ResponseDto.databaseError();
-        }
+            String email = dto.getEmail();
+            boolean existedEmail = userRepository.existsByEmail(email);
+            if(existedEmail) return SignUpResponseDto.duplicateEmail();
+ 
+            String userName= dto.getUserName();
+            boolean existedUserName = userRepository.existsByUserName(userName);
+            if(existedUserName) return SignUpResponseDto.duplicateUserName();
+            
+            String password = dto.getPassword();
+            String encodedPassword = passwordEncoder.encode(password);
+            dto.setPassword(encodedPassword);
+            
+            User userEntity = new User(dto);
+            userRepository.save(userEntity);
+ 
+         } catch (Exception exception) {
+             exception.printStackTrace();
+             return ResponseDto.databaseError();
+         }
 
         return SignUpResponseDto.success();
     }

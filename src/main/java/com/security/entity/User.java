@@ -21,15 +21,22 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer userId;
+    private Integer id;
+
     private String email;
     private String password;
-    private String nickname;
+
+    private String firstName;
+    private String lastName;
+
+    private String userName;
     private String profileImage;
     
     public User(SignUpRequestDto dto) {
         this.email = dto.getEmail();
         this.password = dto.getPassword();
-        this.nickname = dto.getNickname();
+        this.userName = dto.getUserName();
+        this.firstName = dto.getFirstName();
+        this.lastName = dto.getLastName();
     }
 }
